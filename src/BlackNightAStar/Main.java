@@ -12,7 +12,7 @@ class Main {
     }
 
     private static void treeSearch() {
-        System.out.println("GreedySearch the original");
+        System.out.println("A* Search the original");
         AStarSearch<Action, BlackProblem> treeSearch = new AStarSearch<>();
         boolean[] liste = new boolean[5];
         for (int i = 0; i < liste.length; i++) {
@@ -20,6 +20,6 @@ class Main {
         }
         ArrayList<Node<Action>> solve = treeSearch.solve(new BlackProblem(new BlackNode(new BlackState(liste), null, null)));
         solve.forEach(System.out::println);
-        System.out.println("GreedySearch the original\n");
+        System.out.println("A* Search the original\n");
     }
 }
